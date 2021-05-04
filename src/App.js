@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import genColors from './colors.js';
+import Gradient from './Gradient.js';
+import Nav from './Nav.js';
 
 function App() {
+
+  let colors = genColors();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Gradient colors={colors} />
+      <Nav colors={colors} />
+      <header className="App-header">HEYA HIYA HEY</header>
     </div>
   );
 }
